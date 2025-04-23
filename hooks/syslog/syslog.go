@@ -9,7 +9,7 @@ import (
 	"os"
 	"time"
 
-	"github.com/sirupsen/logrus"
+	"github.com/liugehao/ffff"
 )
 
 // SyslogHook to send logs via syslog.

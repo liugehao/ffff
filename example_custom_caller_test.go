@@ -6,7 +6,7 @@ import (
 	"runtime"
 	"strings"
 
-	"github.com/sirupsen/logrus"
+	"github.com/liugehao/ffff"
 )
 
 func ExampleJSONFormatter_CallerPrettyfier() {

@@ -5,7 +5,7 @@ import (
 	"os"
 	"time"
 
-	log "github.com/sirupsen/logrus"
+	log "github.com/liugehao/ffff"
 )
 
 // Hook is a hook that writes logs of specified LogLevels to specified Writer
